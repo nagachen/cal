@@ -58,6 +58,9 @@
             width: 15.7vw;
             height: 5vh;
         }
+       .box:hover{
+            background-color:  #ccc;
+        }
     </style>
 </head>
 
@@ -65,45 +68,39 @@
     <div class="container">
         <label class="screen" for="" id="screen">screen</label>
         <div class="content">
-        <button class="box">CE</button>
-        <button class="box">C</button>
-        <button class="box">back</button>
-        <button class="box">9</button>
-        <button class="box">8</button>
-        <button class="box">7</button>
-        <button class="box">6</button>
-        <button class="box">5</button>
-        <button class="box">4</button>
-        <button class="box">3</button>
-        <button class="box">2</button>
-        <button class="box">1</button>
-        <button class="box">+/-</button>
-        <button class="box">0</button>
-        <button class="box">.</button> 
+        <button class="box" value="reset">CE</button>
+        <button class="box" value="clear">C</button>
+        <button class="box" value="del">back</button>
+        <button class="box" value="7">7</button>
+        <button class="box" value="8">8</button>
+        <button class="box" value="9">9</button>
+        <button class="box" value="4">4</button>
+        <button class="box" value="5">5</button>
+        <button class="box" value="6">6</button>
+        <button class="box" value="1">1</button>
+        <button class="box" value="2">2</button>
+        <button class="box" value="3">3</button>
+        <button class="box" value="">+/-</button>
+        <button class="box" value="0">0</button>
+        <button class="box" value=".">.</button> 
 
     </div>
         <div class="calc">
-            <button class="box">÷</button>
-            <button class="box">×</button>
-            <button class="box">－</button>
-            <button class="box">+</button>
-            <button class="box">=</button>
+            <button class="box" vaule="/">÷</button>
+            <button class="box" vaule="*">×</button>
+            <button class="box" vaule="-">－</button>
+            <button class="box" vaule="+">+</button>
+            <button class="box" vaule="=">=</button>
     
     
             </div>
-            <div class="num">
-
-    </div>
-
     <script>
-        function scr() {    //顯示畫面
-            numA =    
-    }
+    
 
-        let numA
-        let calc
-        let numB
-        let result 
+        let input = "0"; //記錄輸入值
+        let result = 0; //記錄結果
+        let numA = ""; //記錄+-*/
+        
     </script>
 
 </body>
