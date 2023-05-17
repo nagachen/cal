@@ -17,8 +17,8 @@
 
         .container {
             border: 1px solid black;
-            width: 21.3vw;
-            height: 33vh;
+            width: 25.2vw;
+            height: 42vh;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
@@ -28,8 +28,8 @@
         }
 
         .box {
-            width: 5vw;
-            height: 5vh;
+            width: 6vw;
+            height: 7vh;
             /* min-width: 40px;
             min-height: 40px; */
             margin: 1px;
@@ -55,8 +55,8 @@
         }
 
         .content {
-            width: 15.7vw;
-            height: 5vh;
+            width: 18.8vw;
+            height: 36vh;
         }
        .box:hover{
             background-color:  #ccc;
@@ -66,23 +66,23 @@
 
 <body>
     <div class="container">
-        <label class="screen" for="" id="screen">screen</label>
+        <label class="screen" for="" id="screen">0</label>
         <div class="content">
-        <button class="box" value="reset">CE</button>
-        <button class="box" value="clear">C</button>
-        <button class="box" value="del">back</button>
-        <button class="box" value="7">7</button>
-        <button class="box" value="8">8</button>
-        <button class="box" value="9">9</button>
-        <button class="box" value="4">4</button>
-        <button class="box" value="5">5</button>
-        <button class="box" value="6">6</button>
-        <button class="box" value="1">1</button>
-        <button class="box" value="2">2</button>
-        <button class="box" value="3">3</button>
-        <button class="box" value="">+/-</button>
-        <button class="box" value="0">0</button>
-        <button class="box" value=".">.</button> 
+        <button class="box" onclick="" value="reset">CE</button>
+        <button class="box" onclick="" value="clear">C</button>
+        <button class="box" onclick="" value="del">back</button>
+        <button class="box" onclick="oprater('7')" >7</button>
+        <button class="box" onclick="oprater('8')" >8</button>
+        <button class="box" onclick="oprater('9')" >9</button>
+        <button class="box" onclick="oprater('4')" >4</button>
+        <button class="box" onclick="oprater('5')" >5</button>
+        <button class="box" onclick="oprater('6')" >6</button>
+        <button class="box" onclick="oprater('1')" >1</button>
+        <button class="box" onclick="oprater('2')" >2</button>
+        <button class="box" onclick="oprater('3')" >3</button>
+        <button class="box" onclick="" value="">+/-</button>
+        <button class="box" onclick="oprater('0')" >0</button>
+        <button class="box" onclick="oprater('.')" >.</button> 
 
     </div>
         <div class="calc">
@@ -95,12 +95,24 @@
     
             </div>
     <script>
+    function oprater(str){
+        let pic = picture.value; //畫面顯示 計算累加
+        console.log(picture.innerText);
+        console.log('picture type =',typeof(picture.innerText))
+        if(picture.innerText!='0'){
+            picture.innerText += str;
+            console.log(picture.innerText);
+        }else{
+            picture.innerText = str;
+            console.log(picture.innerText);
+        }
     
+    }
 
-        let input = "0"; //記錄輸入值
+        
         let result = 0; //記錄結果
         let numA = ""; //記錄+-*/
-        
+        let picture = document.getElementById("screen"); //畫面顯示 //記錄輸入值
     </script>
 
 </body>
